@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+body
+{
+	  font-family: Arial, Helvetica, sans-serif;
+	    height: 100%;
+}
+
+
+
+textarea {
+
+   white-space: nowrap; /* will prevent the default wrapping of text to next line */
+	overflow-x: scroll;
+}
+textarea.form-control
+{
+	 height:438px;
+	 font-size: 13px;
+}
+
+#yellow {
+  height: 100%;
+  background: yellow;
+}
+
+.cardmarco
+{
+	margin-bottom:0rem;
+}
+
+.labelsom
+{
+	 font-size: 14px;
+}
+
+.text_table_info
+{
+	 font-size: 15px;
+}
+
+.form-controltamanio
+{
+	
+  font-size: 15px;
+  height:438px;
+}
+
+.btn-primary2 {
+    color: #aabbcc; 
+    border-color: #007bff;
+    box-shadow: none;
+}
+

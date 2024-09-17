@@ -1,0 +1,43 @@
+Input Parameters
+Calr Instruments
+
+UNIT SN
+	DiB SN
+		ULDL 0
+			Band 0
+				Iteracion
+					Calibration  ---Step01 HEAD
+						EQ --aca ---Step0101 HEADBRANCH
+							Calibration -paso Step010101
+								Lvls    
+								Pwrs
+								Lvls Plots
+								Pwrs Plots
+							Check   -paso Step010102
+								Lvls
+								
+						LSGP -- Step0102
+							Calibration   --- Step010201
+								Lvls
+								Sq
+								Gain
+								Pwrs
+								Current
+							Check
+								Lvls
+								Sq
+								Gain
+								Pwrs
+								Current
+						SA Offset
+							Calibration
+								offset value
+							Check
+								offsetvalue
+						VCXO
+							Calibration
+								measure
+							Check
+								Measure
+					Final Check --Step02
+						Measures

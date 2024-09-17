@@ -1,0 +1,250 @@
+AÑO 2021
+[10:02 AM] Leandro Julian
+    -  OK ******************  CUANDO SE GENERA LA WO PARA EL IDPRODUCT 611, INGRESA MAS BANDAS DE LAS QUE SON EN LA TABLA ORDERS_SPECS
+-     VER PORQUE NO FILTRA POR IDREV LA TABLA DE PRODUCTS_LABELINGS EN LA WEB. DE PASO CAMBIAR EL NOMBRE EN LA WEB DE INTERTEK A SGS
+-     VER EL TEMA DE EMPEZAR A USAR LA TABLA FAS_FINALCHECK_REFERENCES_RESULT EN VEZ DE FAS_FINALCHECKREF_RESULT Y MIGRAR LOS DATOS DE UNA A OTRA TAMBIEN. ESTO YA QUEDO LISTO.
+-     ok ***************** CUANDO ELEGIS EL CIU CUANDO GENERAS UN WO PARECE QUE NO ESTA FILTRANDO POR ID REV DEL PRODUCTO
+-     CREO QUE CUANDO SE GENERA UN RMA SE CARGA BIEN EN BASE PERO NO GENERA LA PETICION PARA QUE EL FASCLIENT LA PROCECE
+-     CUANDO GENERO EL REPORTE DEL RMA DEBE CARGAR LA INFORMACION DEL RMA Y NO EL DE LA SO ORIGINAL
+-     AGREGAR CAMPO (O VER COMO SOLUCIONAR) PARA RELACIONAR EL CIU DE EMPRESA EXTERNA CON EL DE FIPLEX
+​[10:15 AM] Leandro Julian
+    -    TOMAR GAIN Y MAX POWER DEL FORMULARIO Y NO DEL OBJECTBAND CUANDO SE GENERA SO
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+*********************************************************
+*********************************************************
+*********************************************************	
+	
+
+---ver los try q se duplican
+https://webfas.fiplex.com/calibrationtopdfconimgsaleorders.php?idsndib=20116114FU&iduldl=0&idmb=0
+
+modificar los selects de la tabla confidential_fw (PREGUNTAR A MARCO)
+ 
+
+
+
+acorigliano - Dosha1103
+------------------------------------
+erivera - Hh5=mCeD2_
+
+
+
+marcosspinnaker
+47a9tZvzj4
+
+
+rprice
+RPrice$
+
+**************************************************************
+*** para recodar *****
+Simpre Uplink y luego Downlink
+siempre Agus. graba ban 0 y luego 1. tomar para relacionar.
+**************************************************************
+
+----------------------------------------------------------------------------------------------
+-----------------------***** P E N D I E N T E S *****----------------------------------------
+----------------------------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------------------------
+mostrar un SN de un WO y mostrar todo la historial
+----------------------------------------------------------------------------------------------
+ver la posibilidad de agregar SN desde Spinnaker.
+----------------------------------------------------------------------------------------------
+***NUEVO MODULO
+--------------------------------------------------------------
+ingresan CUI Y SN
+ver esos video.
+Fase 0. .permisos a usuario y acciones.
+Fase 1 , parametros de ensamblaje
+parametros de ensamblaje x cui
+
+1 Semana
+
+Fase 2.. Web mas reproduce video  + Formulario + 
+1 Semana
+
+Fase 3  -- macheo de todos los datos.
+Fase 4 Calidad  y formulario de calidad..
+fase 5 .... paso que entre a la calibration
+
+Fase 0 (3 days)
+Permisos/usuarios/acciones ensambladores
+
+Fase 1 (1week)
+Parametrizacion ASSY Base de datos por CIU
+
+Fase 2 (1week)
+Pagina webfas reproductor video + formulario checks para ensamblador
+
+Fase 3 (1week)
+Matcheo SNs Unit/Placa/Pallet/WO?
+
+Fase 4 (1week)
+Quality Control pagina formulario
+Quality llenado de planilla
+
+Fase 5(1week)
+Merge con Calibration condiciones de OK Quality
+
+Resumen 
+Fase 0 (3 days)
+Permisos/usuarios/acciones ensambladores
+Fase 1 (1week)
+Parametrizacion ASSY Base de datos por CIU
+Fase 2 (1week)
+Pagina webfas reproductor video + formulario checks para ensamblador
+Fase 3 (1week)
+Matcheo SNs Unit/Placa/Pallet/WO?
+Fase 4 (1week)
+Quality Control pagina formularionumero de serido del gabinete
+Quality llenado de planilla
+Fase 5(1week)
+Merge con Calibration condiciones de OK Quality
+************************************************
+ensamblador
+------------------------------
+Assemby Run (asembli ran)
+arranca de sde Wororder.. desde el SN.. (partimos desde el SN Y CIU) 
+SN gabinete , SN placa, ciu placa.
+cabinet SN, motherboard  SN, CIU
+Arranca con el CIU --> ver confidencial.
+link al Assemby Run (asembli ran)
+-------------------------------------------------------------
+
+
+
+1.-    insertar el ciu en la tabla product, generara un idproduct 
+2.-    crear un arbol de calibracion para ese ciu en la tabla fas_tree 
+3.-    asociar el idproduct a ese nuevo arbol en la tabla fas_tree_product 
+4.-    agregar el label del ciu en la tabla products_labeling (fijarnos que vamos a hacer con la tabla nueva products_label) 
+5.-    cargar el ciu en la tabla objectband y asignarle valores de ganancia y maxpwer 
+6.-    completar la tabla fas_instruments_parameters donde se cargaran las referencias de los instrumentos para cada branch que tenga que hacer 
+7.-    completar la tabla fas_tree_product_reference donde se cargargan las referencias, tolerancias y numero de mediciones que deben tener los branch 
+8.-    completar la tabla fas_confidential_fw con los fw correspondientes al ciu y con el calr string asociado
+[Yesterday 7:41 PM] Leandro Julian
+les dejo el instructivo para dar de alta el producto del lado del java
+
+
+-----------------------------------------------------------------------------------------------------------------------
+VEr dependencias de objetos
+-----------------------------------------------------------------------------------------------------------------------
+Hacer una web para mostrar x CIu. los Label y los FW disponibles
+Products_FW
+grupo flia . familia tipo productos, productos.
+
+ finalcheckref y a la tabla instrumentsparameters
+ tmb tienen CIU en las tablas.
+-----------------------------------------------------------------------------------------------------------------------
+
+10 Megas..
+SELECT COUNT(*) FROM fas_sameasures
+-----------------------------------------------------------------------------------------------------------------------
+por CIU  / sN / SO. buscar en el activiby log
+nuevo campo.. para palabra clave.. en runinfodb
+--------------------------------------
+------Crear tabla y meter INSERt en el misma funcion que buscamos que arbol es para ese sn y ciu
+------fas_tree_maasure_products..
+**TERMINADO esperando implementacion 
+------------------------------------------------------------------------------------------
+HACER un Liberador de SN.. desde WEB.. automatico..
+------------------------------------------------------------------------------------------
+poner q paso total pass true lo q no paso.. --> hacer un boton. solo para development
+------------------------------------------------------------------------------------------
+Ver como se esa este nueva forma de BKS
+https://www.postgresql.org/docs/current/app-pgbasebackup.html
+---------------------------------------------------------------------------------------------
+**Replicar Nube a Fiplex**
+------------------------------------------------------------------------------------------
+Alta de PRoductos.
+---- -----
+Printer LABEL  -- faltan ver como mostrar todos los sn de un SO.
+
+--------------------------
+Locker log.. ver de separar por empresa...
+-------------------------------------------------
+
+fas_facstring.. ver de ponerlo en el FAS CLIENT
+-------------------------------------------------
+Productos x empresa
+
+
+VER activar Scrooll horizontal en TK suupor y Logdb
+
+-----------------------------
+Insert desde WO y SO .. al Fas petitionserver..
+ver excel.
+
+
+
+fas_tree_measure_products updatear campos. esta mal calculado el idconfiguracion
+
+
+
+fnt_select_components_pa  -- usando 
+fnt_select_components_acf  -- usando
+fnt_select_components_dib
+fnt_select_components_passive
+
+
+
+// alert('PO associated with another customer');
+ver q no andaaa,,
+ver el tema de los botones para borrar unit chanel.
+
+
+el SO 20200382SO  sale dos veces con distinto ciu - PAg Saleorders
+
+
+functionn.. 
+Select_ fas_confidencial_fw-- parametro entrada CIU... responder JSon de toda la tabla
+
+
+
+Nuevo .. subnivelll Idsubtypeprodcuts.y pensar si no meto un campo mas...  (dos campos mas..)
+
+
+Ver Tema de arbol de medicion para crear el arbol de ciu ..
+
+Calibration_EQ_Calibration_Levels	00100300A008
+Calibration_EQ_Calibration_Powers	00100300A00C
+Calibration_EQ_Check_Levels	00100300B01D
+Calibration_EQ_Check_Powers	00100300B02E
+Calibration_LSGP_Calibration_Levels	00100401401F
+Calibration_LSGP_Calibration_Powers	001004014022
+Calibration_LSGP_Check_Levels	001004015024
+Calibration_LSGP_Check_Powers	001004015027
+FinalCheck_Measures_Gain	002007013
+FinalCheck_Measures_MaxPower	00200701A
+FinalCheck_Measures_NF_NoiseFloor	00200701C02D
+FinalCheck_Measures_IMD_Powers	00200701B02F
+FinalCheck_Measures_Spurious	002007030
+FinalCheck_Measures_Lineality	002007031
+
+VER hoja de excel de MASTERIMPORTER  - IntrumentParameters aux  o IntrumentParameters
+
+
+Replicar Arbol para cada ciu basado en los cheque del alta..
+
+
+
+alta de banda
+alta de idS port
+alta PA consumption references (voltage, current, ..)
+alta de diplexter, PRs

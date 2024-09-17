@@ -1,0 +1,136 @@
+(17523) [Thu Mar 26 06:53:14 2020] MCP Starting Bucardo version 5.5.0
+(17523) [Thu Mar 26 06:53:14 2020] MCP Log level: normal
+(17524) [Thu Mar 26 06:53:14 2020] MCP Master DB Local epoch: 1585219994.85502  DB epoch: 1585219994.85509
+(17524) [Thu Mar 26 06:53:14 2020] MCP Master DB Local time: Thu Mar 26 06:53:14 2020  DB time: 2020-03-26 05:53:14.85509-05
+(17524) [Thu Mar 26 06:53:14 2020] MCP Master DB Local timezone: EDT (-0400)  DB timezone: America/Chicago
+(17524) [Thu Mar 26 06:53:14 2020] MCP Master DB Postgres version: 120002
+(17524) [Thu Mar 26 06:53:14 2020] MCP Master DB Database port: 5432
+(17524) [Thu Mar 26 06:53:14 2020] MCP Master DB Database host: localhost
+(17524) [Thu Mar 26 06:53:14 2020] MCP PID: 17524
+(17524) [Thu Mar 26 06:53:14 2020] MCP Postgres library version: 120001
+(17524) [Thu Mar 26 06:53:14 2020] MCP bucardo: /usr/bin/bucardo
+(17524) [Thu Mar 26 06:53:14 2020] MCP Bucardo.pm: /usr/share/perl5/Bucardo.pm
+(17524) [Thu Mar 26 06:53:14 2020] MCP OS: linux  Perl: /usr/bin/perl 5.28.1
+(17524) [Thu Mar 26 06:53:14 2020] MCP DBI version: 1.642  DBD::Pg version: 3.10.3 (31003) DBIx::Safe version: 1.2.5
+(17524) [Thu Mar 26 06:53:14 2020] MCP Bucardo object:
+ batch               => '0'
+ bcverbose           => '1'
+ created             => 'Thu Mar 26 06:53:14 2020'
+ dbdpgversion        => '31003'
+ dbhlist             => 'HASH(0x558773fa76a0)'
+ dbhost              => 'localhost'
+ dbname              => 'bucardo'
+ dbpass              => '<not shown>'
+ dbport              => '5432'
+ dbuser              => 'bucardo'
+ dryrun              => '0'
+ exit_on_nosync      => '0'
+ extraname           => ''
+ listening           => 'HASH(0x558773b42a50)'
+ logclean            => '0'
+ logcodes            => 'HASH(0x558773d91378)'
+ logdest             => ['/var/log/bucardo']
+ logextension        => ''
+ logpid              => '17524'
+ logprefix           => 'MCP'
+ logseparate         => '0'
+ masterdbh           => 'DBI::db=HASH(0x5587743648f8)'
+ mcp_backend         => '17525'
+ mcp_clock_timestamp => 'clock_timestamp()'
+ mcppid              => '17520'
+ pid_file            => '/var/run/bucardo/bucardo.mcp.pid'
+ pidmap              => 'HASH(0x558773b4a4a0)'
+ quickstart          => '0'
+ sendmail            => '0'
+ sendmail_file       => ''
+ sqlprefix           => '/* Bucardo 5.5.0 */'
+ stop_file           => '/var/run/bucardo/fullstopbucardo'
+ verbose             => '1'
+ version             => '5.5.0'
+ warning_file        => ''
+(17524) [Thu Mar 26 06:53:14 2020] MCP Bucardo config:
+ autosync_ddl              => 'newcol'
+ bucardo_initial_version   => '5.5.0'
+ bucardo_vac               => '1'
+ bucardo_version           => '5.5.0'
+ ctl_checkonkids_time      => '10'
+ ctl_createkid_time        => '0.5'
+ ctl_sleep                 => '0.2'
+ default_conflict_strategy => 'bucardo_latest'
+ default_email_from        => 'root'
+ default_email_host        => 'localhost'
+ default_email_port        => '25'
+ default_email_to          => 'root'
+ email_auth_pass           => ''
+ email_auth_user           => ''
+ email_debug_file          => ''
+ endsync_sleep             => '1.0'
+ flatfile_dir              => '.'
+ host_safety_check         => ''
+ isolation_level           => 'repeatable read'
+ kid_deadlock_sleep        => '0.5'
+ kid_nodeltarows_sleep     => '0.5'
+ kid_pingtime              => '60'
+ kid_restart_sleep         => '1'
+ kid_serial_sleep          => '0.5'
+ kid_sleep                 => '0.5'
+ log_conflict_file         => '/var/log/bucardo/conflict.log'
+ log_level                 => 'normal'
+ log_level_number          => '2'
+ log_microsecond           => '0'
+ log_showlevel             => '0'
+ log_showline              => '0'
+ log_showpid               => '1'
+ log_showsyncname          => '1'
+ log_showtime              => '3'
+ mcp_dbproblem_sleep       => '15'
+ mcp_loop_sleep            => '0.2'
+ mcp_pingtime              => '60'
+ mcp_vactime               => '60'
+ piddir                    => '/var/run/bucardo'
+ quick_delta_check         => '1'
+ reason_file               => '/var/log/bucardo/restart.reason'
+ reload_config_timeout     => '30'
+ semaphore_table           => 'bucardo_status'
+ statement_chunk_size      => '6000'
+ stats_script_url          => 'http://www.bucardo.org/'
+ stopfile                  => 'fullstopbucardo'
+ syslog_facility           => 'log_local1'
+ tcp_keepalives_count      => '0'
+ tcp_keepalives_idle       => '0'
+ tcp_keepalives_interval   => '0'
+ vac_run                   => '30'
+ vac_sleep                 => '120'
+ warning_file              => ''
+(17524) [Thu Mar 26 06:53:15 2020] MCP Activating sync "MAESTROFIPLEXCBAESCLAVONUBE"
+(17524) [Thu Mar 26 06:53:15 2020] MCP Running validate_sync on "MAESTROFIPLEXCBAESCLAVONUBE"
+(17524) [Thu Mar 26 06:53:15 2020] MCP Connecting to database "ESCLAVONUBE" (target)
+(17524) [Thu Mar 26 06:53:19 2020] MCP Database "ESCLAVONUBE" Local epoch: 1585219999.01291  DB epoch: 1585219999.11431
+(17524) [Thu Mar 26 06:53:19 2020] MCP Database "ESCLAVONUBE" Local time: Thu Mar 26 06:53:19 2020  DB time: 2020-03-26 10:53:19.114305+00
+(17524) [Thu Mar 26 06:53:19 2020] MCP Database "ESCLAVONUBE" Local timezone: EDT (-0400)  DB timezone: Etc/UTC
+(17524) [Thu Mar 26 06:53:19 2020] MCP Database "ESCLAVONUBE" Postgres version: 120002
+(17524) [Thu Mar 26 06:53:19 2020] MCP Database "ESCLAVONUBE" Database port: 5432
+(17524) [Thu Mar 26 06:53:19 2020] MCP Database "ESCLAVONUBE" Database host: 107.191.42.48
+(17524) [Thu Mar 26 06:53:19 2020] MCP Connecting to database "MAESTROFIPLEXCBA" (source)
+(17524) [Thu Mar 26 06:53:19 2020] MCP Database "MAESTROFIPLEXCBA" Local epoch: 1585219999.89281  DB epoch: 1585219999.89283
+(17524) [Thu Mar 26 06:53:19 2020] MCP Database "MAESTROFIPLEXCBA" Local time: Thu Mar 26 06:53:19 2020  DB time: 2020-03-26 06:53:19.892826-04
+(17524) [Thu Mar 26 06:53:19 2020] MCP Database "MAESTROFIPLEXCBA" Local timezone: EDT (-0400)  DB timezone: America/New_York
+(17524) [Thu Mar 26 06:53:19 2020] MCP Database "MAESTROFIPLEXCBA" Postgres version: 120002
+(17524) [Thu Mar 26 06:53:19 2020] MCP Database "MAESTROFIPLEXCBA" Database port: 5432
+(17524) [Thu Mar 26 06:53:19 2020] MCP Database "MAESTROFIPLEXCBA" Database host: /var/run/postgresql
+(17524) [Thu Mar 26 06:53:19 2020] MCP Active syncs: 1
+(17524) [Thu Mar 26 06:53:19 2020] MCP Entering main loop
+(17527) [Thu Mar 26 06:53:19 2020] VAC New VAC daemon. PID=17527
+(17527) [Thu Mar 26 06:53:19 2020] VAC Connected to database "MAESTROFIPLEXCBA" with backend PID of 17529
+(17527) [Thu Mar 26 06:53:19 2020] VAC Warning! Cannot vacuum db MAESTROFIPLEXCBA unless we have a bucardo schema
+(17524) [Thu Mar 26 06:53:20 2020] MCP Created VAC 17527
+(17530) [Thu Mar 26 06:53:20 2020] CTL New controller for sync "MAESTROFIPLEXCBAESCLAVONUBE". Relgroup is "HERD1", dbs is "MAESTROFIPLEXCBAESCLAVONUBE". PID=17530
+(17530) [Thu Mar 26 06:53:20 2020] CTL   stayalive: 1 checksecs: 0 kicked: 1
+(17530) [Thu Mar 26 06:53:20 2020] CTL   kidsalive: 1 onetimecopy: 0 lifetimesecs: 0 (NULL) maxkicks: 0
+(17524) [Thu Mar 26 06:53:20 2020] MCP Created controller 17530 for sync "MAESTROFIPLEXCBAESCLAVONUBE". Kick is 1
+(17530) [Thu Mar 26 06:53:23 2020] CTL Database "ESCLAVONUBE" backend PID: 28225
+(17530) [Thu Mar 26 06:53:23 2020] CTL Database "MAESTROFIPLEXCBA" backend PID: 17533
+(17534) [Thu Mar 26 06:53:23 2020] KID (MAESTROFIPLEXCBAESCLAVONUBE) New kid, sync "MAESTROFIPLEXCBAESCLAVONUBE" alive=1 Parent=17530 PID=17534 kicked=1 
+(17534) [Thu Mar 26 06:53:27 2020] KID (MAESTROFIPLEXCBAESCLAVONUBE) Kid has died, error is: DBD::Pg::st execute failed: ERROR:  relation "bucardo.bucardo_truncate_trigger" does not exist LINE 1: ...ident(tname), MAX(EXTRACT(epoch FROM cdate)) FROM bucardo.bu...                                                              ^ at /usr/share/perl5/Bucardo.pm line 3303. Line: 5037 Main DB state: ? Error: none DB ESCLAVONUBE state: ? Error: none DB MAESTROFIPLEXCBA state: 42P01 Error: 7 
+(17534) [Thu Mar 26 06:53:28 2020] KID (MAESTROFIPLEXCBAESCLAVONUBE) Kid 17534 exiting at cleanup_kid. Sync "MAESTROFIPLEXCBAESCLAVONUBE" Reason: DBD::Pg::st execute failed: ERROR:  relation "bucardo.bucardo_truncate_trigger" does not exist LINE 1: ...ident(tname), MAX(EXTRACT(epoch FROM cdate)) FROM bucardo.bu...                                                              ^ at /usr/share/perl5/Bucardo.pm line 3303. Line: 5037 Main DB state: ? Error: none DB ESCLAVONUBE state: ? Error: none DB MAESTROFIPLEXCBA state: 42P01 Error: 7 
+(17524) [Thu Mar 26 06:53:28 2020] MCP Starting check_sync_health

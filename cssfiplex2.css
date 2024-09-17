@@ -1,0 +1,36 @@
+.table_fixed_marco_scroll  {
+  display: block;
+  position: relative;
+height: 450px;
+overflow: auto;
+background:#eee; 
+}
+
+.table_fixed_marco_scroll thead th { position: sticky; top: 0px;  background:#eee;  }
+
+.texto10
+{
+	font-size: 12px;
+}
+
+.textotabla10
+{
+	font-size: 13px;
+}
+
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #0053a1;
+}
+
+.colornaranajafiplex
+{
+	
+	color:#f39323;
+}
+
+.colorazulfiplex
+{
+	
+	color:#0053a1;
+}
